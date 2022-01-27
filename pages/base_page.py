@@ -1,6 +1,8 @@
+from os import link
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import math
+import time
 
 class BasePage(object):
 

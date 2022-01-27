@@ -14,3 +14,5 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     ADD_BUTTON = (By.CSS_SELECTOR, "#add_to_basket_form > button")
+    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
+    PRODUCT_NAME_BASKET = (By.CSS_SELECTOR, "#messages>div:nth-child(1) strong")
