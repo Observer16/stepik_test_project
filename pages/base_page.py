@@ -1,4 +1,3 @@
-from os import link
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
@@ -17,7 +16,7 @@ class BasePage():
         '''команда для неявного ожидания со значением по умолчанию в 10'''
         self.browser = browser
         self.url = url
-        self.browser.implicitly_wait(timeout)
+        #self.browser.implicitly_wait(timeout)
 
     def is_element_present(self, how, what):
         '''в классе реализуем метод is_element_present, в котором будем перехватывать исключение. 
@@ -75,3 +74,6 @@ class BasePage():
         except NoSuchElementException:
             print("No Login link page")
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+            
